@@ -8,8 +8,10 @@ window.addEventListener("keydown",(e)=>{
     console.log(code);
     keys.forEach((item,idx)=>{
         let key = item.dataset.key;
+        item.classList.remove("playing");
         if(key === code){
             item.classList.add("playing");
+            audios[idx].play();
             console.log(item.classList)
         } 
 
